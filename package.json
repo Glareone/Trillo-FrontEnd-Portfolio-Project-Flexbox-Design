@@ -1,0 +1,19 @@
+{
+  "name": "udemy-second-portfolio-project",
+  "version": "1.0.0",
+  "description": "udemy advanced sass course and my second portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glareone/Udemy-Advanced-Sass-Second-Portfolio-Project.git"
+  },
+  "author": "Aleksei Kolesnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glareone/Udemy-Advanced-Sass-Second-Portfolio-Project/issues"
+  },
+  "homepage": "https://github.com/Glareone/Udemy-Advanced-Sass-Second-Portfolio-Project#readme"
+}
