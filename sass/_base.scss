@@ -1,0 +1,44 @@
+// :root pseudo class to store our css variables. Pseudo Element with highest priority. Selects entire document.
+// We'll declare here all our properties because it will be in scope of all application and will be available everywhere
+// We'll use css variables instead of sass variables because these are supported by css3 natively and we also
+// could manipulate them from javascript and from other sources.
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #FF3366;
+  --color-primary-dark: #BA265D;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // we prefer 1rem equals to 10px, 16px is default. 10px/16px = 62.5%
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat; // to prevent repeating linear gradient multiple times because at the very start of our
+  // application. its height is very small and we see a lot of stripes(lines) from left to right
+
+  min-height: 100vh; // for very initial purposes to make our body 100%
+}
