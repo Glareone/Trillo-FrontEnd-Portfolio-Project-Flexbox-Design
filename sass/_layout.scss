@@ -1,0 +1,29 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+
+  flex: 0 0 18%; // flex-grow, flex-shrink, flex-basis in short notation
+}
+
+.hotel-view {
+  background-color: orangered;
+  flex: 1; // will occupy all space because in .content container are only two elements, and sidebar doesn't have positive flex-grow
+}
