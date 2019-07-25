@@ -2,54 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
 
     <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="img/logo.png" alt="trillo logo" class="logo">
-            <form action="#">
-                <input type="text" class="search__input" placeholder="search hotels">
-                <button class="search__button">
-                    <svg class="search__icon">
-                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-                    </svg>
-                </button>
-            </form>
-            <nav class="user-nav">
-                <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                    </svg>
-                </div>
-                <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-chat"></use>
-                    </svg>
-                    <span class="user-nav__notification">13</span>
-                </div>
-                <div class="user-nav__user">
-                    <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
-                    <span class="user-nav__user-name">Aleksei</span>
-                </div>
-            </nav>
+<div class="container">
+    <header class="header">
+        <img alt="trillo logo" class="logo" src="img/logo.png">
 
-        </header>
-        <div class="content">
-            <nav class="sidebar">
-                NAVIGATION
-            </nav>
-            <main class="hotel-view">
-                Main menu
-            </main>
+        <form action="#" class="search">
+            <input class="search__input" placeholder="Search hotels:" type="text">
+            <button class="search__button">
+                <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
 
-        </div>
+        <nav class="user-nav">
+            <div class="user-nav__icon-box">
+                <svg class="user-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                </svg>
+            </div>
+            <div class="user-nav__icon-box">
+                <svg class="user-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-chat"></use>
+                </svg>
+                <span class="user-nav__notification">13</span>
+            </div>
+            <div class="user-nav__user">
+                <img alt="user photo" class="user-nav__user-photo" src="img/user.jpg">
+                <span class="user-nav__user-name">Aleksei</span>
+            </div>
+        </nav>
+
+    </header>
+    <div class="content">
+        <nav class="sidebar">
+            NAVIGATION
+        </nav>
+        <main class="hotel-view">
+            Main menu
+        </main>
+
     </div>
+</div>
 </body>
 </html>
