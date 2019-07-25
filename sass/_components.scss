@@ -299,3 +299,76 @@
     box-shadow: none;
   }
 }
+
+// ======================================== MAIN PAGE: PARAGRAPH =======================================================
+.paragraph:not(:last-of-type) { // last of this particular type
+  margin-bottom: 2rem;
+}
+
+// ========================================== MAIN PAGE: LIST ==========================================================
+.list {
+  display: flex;
+  flex-wrap: wrap; // move element to the next line if overflowing the current one. With setting the width for every
+  // element we could organize two columns
+
+  &__item {
+    // we set 50% of width because we want two elements side by side. We organize two columns by using this little trick
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+  }
+
+  &__item::before { // to create and use svg directly from css code we have to use here, in pseudo element
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .7rem;
+    // For old browsers
+    // if we use background image there is no way to change the svg color.
+    // it doesn't work for old browsers.
+    //background-image: url("../img/chevron-thin-right.svg");
+    //background-size: cover;
+
+    // For modern browsers we could use masks
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../img/chevron-thin-right.svg"); // it still doesn't work without webkit prefix.
+    -webkit-mask-size: cover; // works like clip-path :) without it our image won't work, we will see only pink rectangles
+    // also without size: cover we can't make svg smaller, it will show svg partially.
+  }
+
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+}
+// ======================================== MAIN PAGE: RECOMMEND =======================================================
+.recommend {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+
+  }
+
+  &__photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    box-sizing: content-box; // we set it here because if we add border - our images become smaller (they shrink).
+    // adding box-sizing we tell browser that it size should be based on content without border or padding.
+    border: 3px solid #FFF;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
