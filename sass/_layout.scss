@@ -38,6 +38,7 @@
 // ================================== MAIN PAGE: DETAILS, DESCRIPTION, REVIEWS =========================================
 .details {
   display: flex;
+  font-size: 1.4rem;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
@@ -45,7 +46,6 @@
 
 .description {
   flex: 0 0 60%;
-  font-size: 1.4rem;
   background-color: #FFF;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -55,6 +55,8 @@
 
 .user-reviews {
   flex: 1;
-  background-color: yellowgreen;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
