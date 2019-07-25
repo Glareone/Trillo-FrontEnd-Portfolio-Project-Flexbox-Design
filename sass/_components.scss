@@ -183,3 +183,54 @@
   text-align: center;
   padding: 2.5rem;
 }
+
+// ========================================= MAIN PAGE: GALLERY ========================================================
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+// ====================================== MAIN PAGE: HOTEL OVERVIEW =====================================================
+.overview {
+  display: flex;
+
+  &__heading {
+
+  }
+
+  &__stars {
+    // stars will occupy all free space in row and it will be very close to what we want.
+    // But all this space will have all our styles from stars (for example cursor: pointer) and it is not what we really
+    // want. That's why better to use margin-right to occupy all free space but by margin of the stars container.
+    //flex: 1;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+
+  }
+
+  &__rating {
+
+  }
+
+  &__rating-count {
+
+  }
+
+  &__rating-average {
+
+  }
+
+}

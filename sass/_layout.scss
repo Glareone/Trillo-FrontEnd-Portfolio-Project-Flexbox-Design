@@ -31,9 +31,6 @@
 }
 
 .hotel-view {
-  background-color: orangered;
   height: 80rem;
-
   flex: 1; // will occupy all space because in .content container are only two elements, and sidebar doesn't have positive flex-grow
-
 }
