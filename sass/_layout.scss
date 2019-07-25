@@ -11,7 +11,7 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -31,9 +31,30 @@
 }
 
 .hotel-view {
-  background-color: orangered;
-  height: 80rem;
+  flex: 1; // will occupy all space because in .content container are only two elements,
+  // and sidebar doesn't have positive flex-grow (it has 0)
+}
 
-  flex: 1; // will occupy all space because in .content container are only two elements, and sidebar doesn't have positive flex-grow
+// ================================== MAIN PAGE: DETAILS, DESCRIPTION, REVIEWS =========================================
+.details {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  flex: 0 0 60%;
+  font-size: 1.4rem;
+  background-color: #FFF;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  background-color: yellowgreen;
 
 }
