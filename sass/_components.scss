@@ -115,17 +115,64 @@
 
 // ============================================= NAVIGATION: SIDE ======================================================
 .side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
   &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    // transform-origin: bottom; // will start scaling not from the center of nav element, but from the bottom of the element.
+    // will comment it because we will use default value - center;
+    transition: transform .2s,
+                width .4s cubic-bezier(1, 0, 0, 1) .2s, // width transition ( on X direction)
+                background-color .1s; // we need to set this transition because out background-color was specified for before pseudo element
 
   }
 
-  &__link {
+  &__item:hover::before, &__item--active::before {
+    transform: scaleY(1); // scaling on Y direction
+    width: 100%; // set the width which element should get on hover
+  }
 
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 10; // we need to specify z-index and position to display nav items above the hover transformation
+
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; // the color of current element or parent element. WIll get a color from link. (light-1)
+    // if we will setup color exactly here (i mean in __icon) - currentColor will get this color instead of color from link
+    // if we set color for hovering link (i mean &__link:hover) - icon will get this color on hovering. Very useful
   }
 }
 
