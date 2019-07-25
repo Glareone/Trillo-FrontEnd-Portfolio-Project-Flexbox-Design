@@ -138,7 +138,8 @@
                 <div class="description">
                     <p class="paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione
-                        sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+                        sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto
+                        voluptate.
                     </p>
                     <p class="paragraph">
                         Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus,
@@ -159,16 +160,45 @@
                             Lucy and 3 other friends recommend this hotel.
                         </p>
                         <div class="recommend__friends">
-                            <img src="img/user-3.jpg" alt="friend 1" class="recommend__photo">
-                            <img src="img/user-4.jpg" alt="friend 2" class="recommend__photo">
-                            <img src="img/user-5.jpg" alt="friend 3" class="recommend__photo">
-                            <img src="img/user-6.jpg" alt="friend 4" class="recommend__photo">
+                            <img alt="friend 1" class="recommend__photo" src="img/user-3.jpg">
+                            <img alt="friend 2" class="recommend__photo" src="img/user-4.jpg">
+                            <img alt="friend 3" class="recommend__photo" src="img/user-5.jpg">
+                            <img alt="friend 4" class="recommend__photo" src="img/user-6.jpg">
                         </div>
                     </div>
                 </div>
 
                 <div class="user-reviews">
-                    User reviews
+                    <!-- figures are good not only for pictures, but also for reviews -->
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto
+                            dicta animi, totam, itaque officia ex.
+                        </blockquote>
+                        <figcaption class="review__user">
+                            <img alt="User 1" class="review__photo" src="img/user-1.jpg">
+                            <div class="review__user-box">
+                                <p class="review__user-name">Nick Smith</p>
+                                <p class="review__user-date">Mar 23rd, 2019</p>
+                            </div>
+                            <div class="review__rating">7.9</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+                        </blockquote>
+                        <figcaption class="review__user">
+                            <img alt="User 1" class="review__photo" src="img/user-2.jpg">
+                            <div class="review__user-box">
+                                <p class="review__user-name">Mary Thomas</p>
+                                <p class="review__user-date">July 13th, 2019</p>
+                            </div>
+                            <div class="review__rating">9.1</div>
+                        </figcaption>
+                    </figure>
+
+                    <button class="button-inline">Show all <span>&rarr;</span></button>
                 </div>
             </div>
         </main>
