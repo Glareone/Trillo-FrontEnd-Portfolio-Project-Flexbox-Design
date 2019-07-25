@@ -63,30 +63,52 @@
 
 // ============================================= USER NAVIGATION =======================================================
 .user-nav {
-  background-color: greenyellow;
-  &__icon-box {
+  display: flex;
+  align-items: center;
+  align-self: stretch; // increase the height of right header part
 
+  & > * { // select all direct children
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__icon-box {
+    position: relative;
   }
 
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--color-grey-dark-2);
   }
 
   &__notification {
+    display: flex;
+    justify-content: center; // numbers in circles
+    align-items: center;
 
-  }
+    position: absolute;
+    top: 1.85rem;
+    right: 1.1rem;
 
-  &__user {
-
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #FFF;
   }
 
   &__user-photo {
     height: 3.75rem;
-    width: 3.75rem;
-  }
-
-  &__user-name {
-
+    margin-right: 1rem;
+    border-radius: 50%;
   }
 }
