@@ -33,6 +33,7 @@
 .hotel-view {
   flex: 1; // will occupy all space because in .content container are only two elements,
   // and sidebar doesn't have positive flex-grow (it has 0)
+  background-color: #fff;
 }
 
 // ================================== MAIN PAGE: DETAILS, DESCRIPTION, REVIEWS =========================================
