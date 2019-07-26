@@ -387,15 +387,22 @@
     margin-right: .7rem;
     // For old browsers
     // if we use background image there is no way to change the svg color.
-    // it doesn't work for old browsers.
-    //background-image: url("../img/chevron-thin-right.svg");
-    //background-size: cover;
+    // but newer approach with mask isn't supported by old browsers
+    background-image: url("../img/chevron-thin-right.svg");
+    background-size: cover;
 
     // For modern browsers we could use masks
-    background-color: var(--color-primary);
-    -webkit-mask-image: url("../img/chevron-thin-right.svg"); // it still doesn't work without webkit prefix.
-    -webkit-mask-size: cover; // works like clip-path :) without it our image won't work, we will see only pink rectangles
-    // also without size: cover we can't make svg smaller, it will show svg partially.
+    @supports ((-webkit-mask-image: url("../img/chevron-thin-right.svg")) or (mask-image: url("../img/chevron-thin-right.svg"))) {
+      background-image: none; // if we will not make image to none - chrome and all modern browsers will use it instead of mask.
+
+      background-color: var(--color-primary);
+      -webkit-mask-image: url("../img/chevron-thin-right.svg"); // it still doesn't work without webkit prefix.
+      -webkit-mask-size: cover; // works like clip-path :) without it our image won't work, we will see only pink rectangles
+      // also without size: cover we can't make svg smaller, it will show svg partially.
+      mask-image: url("../img/chevron-thin-right.svg");
+      mask-size: cover;
+    }
+
   }
 
   list-style: none;
