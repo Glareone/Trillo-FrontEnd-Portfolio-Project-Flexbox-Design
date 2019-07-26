@@ -443,3 +443,66 @@
     z-index: 1;
   }
 }
+
+// ========================================== MAIN PAGE: CTA ===========================================================
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+// ===================== MAIN PAGE: Button with "Book Now" and "Only 4 rooms left"  Texts ==============================
+.button {
+  position: relative;
+  overflow: hidden; // to hide invisible part
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #FFF;
+  cursor: pointer;
+
+  & > * { // we move all this props here because there are the same for visible and invisible parts
+    display: inline-block;
+    height: 100%; // we need to specify height and width to force to work  "transform: translateY(100%);" (from visible part).
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem; // this padding is large in width because our button should support visible and invisible parts
+    // ( invisible part is longer than visible)
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0; // another padding for invisible part because with such padding as visible part have -
+    // text overflows container and overlaps partially the visible part
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top:0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
