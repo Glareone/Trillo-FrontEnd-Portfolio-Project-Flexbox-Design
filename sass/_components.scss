@@ -119,8 +119,19 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $breakpoint-medium-viewport) {
+    display: flex; // set our side navigation buttons side by side instead of column (pay attention on the same media query in
+    // layout -> content
+    margin: 0;
+  }
+
   &__item {
     position: relative;
+
+    @media only screen and (max-width: $breakpoint-medium-viewport) {
+      flex: 1; // to occupy all navigation by 4 buttons for small screens ( when navigation is on top right under the search panel)
+      margin: 0;
+    }
 
     &:not(:last-child) {
       margin-bottom: .5rem;
@@ -155,6 +166,8 @@
 
   &__link:link,
   &__link:visited {
+    display: flex;
+    align-items: center;
     color: var(--color-grey-light-1);
     text-decoration: none;
     text-transform: uppercase;
@@ -162,8 +175,10 @@
     position: relative;
     z-index: 10; // we need to specify z-index and position to display nav items above the hover transformation
 
-    display: flex;
-    align-items: center;
+    @media only screen and (max-width: $breakpoint-medium-viewport) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__icon {
@@ -182,6 +197,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $breakpoint-medium-viewport) {
+    display: none; // delete legal text from side navigation because it looks weird in navigation for small screens
+  }
 }
 
 // ========================================= MAIN PAGE: GALLERY ========================================================
@@ -365,7 +384,7 @@
   }
 
   &__friends {
-
+    display: flex;
   }
 
   &__photo {
@@ -377,7 +396,7 @@
     border: 3px solid #FFF;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -390,6 +409,11 @@
   padding: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
+
+  @media only screen and (max-width: $breakpoint-medium-viewport) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     position: relative; // for z-index
@@ -448,6 +472,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $breakpoint-medium-viewport) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;

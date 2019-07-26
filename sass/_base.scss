@@ -21,6 +21,12 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+// we need to use sass variables because we can't use our css variables inside media query condition.
+// css doesn't allow us doing this
+$breakpoint-largest-viewport: 75em; // 1200px/16px (default browsers font-size) = 75;
+$breakpoint-large-viewport: 68.75em; // 1100px/16px (default browsers font-size) = 68.75;
+$breakpoint-medium-viewport: 56.25em; // 900px/16px (default browsers font-size) = 56.25;
+
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +39,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // we prefer 1rem equals to 10px, 16px is default. 10px/16px = 62.5%
+
+  @media only screen and (max-width: $breakpoint-large-viewport) {
+    font-size: 50%; // 8px/16px = 50%;
+  }
 }
 
 body {
