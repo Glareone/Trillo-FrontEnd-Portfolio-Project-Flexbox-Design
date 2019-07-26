@@ -11,6 +11,11 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $breakpoint-smallest-viewport) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 
   &__input {
     font-family: inherit;
@@ -179,6 +184,11 @@
       justify-content: center;
       padding: 2rem;
     }
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
   }
 
   &__icon {
@@ -188,6 +198,13 @@
     fill: currentColor; // the color of current element or parent element. WIll get a color from link. (light-1)
     // if we will setup color exactly here (i mean in __icon) - currentColor will get this color instead of color from link
     // if we set color for hovering link (i mean &__link:hover) - icon will get this color on hovering. Very useful
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -225,6 +242,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      font-size: 1.2rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -265,17 +287,29 @@
     margin-left: 3rem;
     color: #FFF;
     padding: 0 3.25rem;
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-count {
     font-size: .8rem;
     text-transform: uppercase;
     margin-top: -5px;
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      font-size: .5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
+
+    @media only screen and (max-width: $breakpoint-small-viewport) {
+      font-size: 1.8rem;
+    }
   }
 }
 

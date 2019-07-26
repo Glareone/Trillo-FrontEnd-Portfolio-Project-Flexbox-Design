@@ -26,6 +26,8 @@
 $breakpoint-largest-viewport: 75em; // 1200px/16px (default browsers font-size) = 75;
 $breakpoint-large-viewport: 68.75em; // 1100px/16px (default browsers font-size) = 68.75;
 $breakpoint-medium-viewport: 56.25em; // 900px/16px (default browsers font-size) = 56.25;
+$breakpoint-small-viewport: 37.5em; // 600px/16px (default browsers font-size) = 37.5;
+$breakpoint-smallest-viewport: 31.25em; // 500px/16px (default browsers font-size) = 31.25;
 
 * {
   margin: 0;
