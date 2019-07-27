@@ -1,7 +1,7 @@
 Hi!
 Here you could find the result set of Udemy Advanced CSS and SASS Courses (Second Project, Trillo)
 You can find a demo via the next url:
-[https://glareone.github.io/Udemy-Advanced-Sass-Second-Portfolio-Project/]
+[ https://glareone.github.io/Trillo-FrontEnd-Portfolio-Project-Flexbox-Design/]
 
 To start project you could do the next:
 1. npm install
